@@ -23,31 +23,30 @@ case 'A':
 {
     function1(tempMat,10,10);
 }
-    break;
+break;
 
 case 'B':
 {
     scanf("%d%d", &i ,&j);
-    printf("%s\n", isTherPath(tempMat,10,i,j) ? "True":"False");
+    printf("%s\n", isTherPath(tempMat,10,i,j) ? "True" : "False");
+    break;
 }
 case 'C':
 {
     scanf("%d%d", &i ,&j);
-    printf("%s\n", theSortestPst(tempMat,10,i,j));
+    printf("%d\n", theSortestPst(tempMat,10,i,j));
+    break;
 }
 default:
     break;
 }
 }
 while (tempChar != 'D');
-{
     for (int i = 0; i < 10; i++)
     {
         free(tempMat[i]);
     }
     free(tempMat);
-    
-}
 
 return 0;
 }
