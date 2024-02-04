@@ -28,14 +28,12 @@ case 'A':
 case 'B':
 {
     scanf("%d%d", &i ,&j);
-    isTherPath(tempMat,10, i,j);
-    printf("thank you");
+    printf("%s/n", isTherPath(tempMat,10,i,j) ? "True":"False");
 }
 case 'C':
 {
     scanf("%d%d", &i ,&j);
-    theSortestPst(tempMat,10, i,j);
-    printf("thank you");
+    printf("%s/n", theSortestPst(tempMat,10,i,j));
 }
 default:
     break;
