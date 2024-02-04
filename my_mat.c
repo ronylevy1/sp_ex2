@@ -8,6 +8,7 @@
 int function1(int **mat, int rowScanf, int colScanf){
     printf("Please write the values of the natrix:\n"); // The matrix values
     //Put the value in the matrixe
+    
     for (int i = 0; i < rowScanf; i++)
     {
         for (int j = 0; j < colScanf; j++)
