@@ -13,7 +13,7 @@ for (int i = 0; i < 10; i++)
 }
 
 
-printf("enter A, B, C or D:/n");
+// printf("enter A, B, C or D:/n");
 
 do{
 scanf("%c", &tempChar);

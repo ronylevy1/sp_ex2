@@ -6,14 +6,14 @@
 #define cols 10
 
 int function1(int **mat, int rowScanf, int colScanf){
-    printf("Please write the values of the natrix:\n"); // The matrix values
+    // printf("Please write the values of the natrix:\n"); // The matrix values
     //Put the value in the matrixe
-    
+
     for (int i = 0; i < rowScanf; i++)
     {
         for (int j = 0; j < colScanf; j++)
         {
-           printf("Write the value at the i and j positiom (%d,%d): ", i, j ); // todo
+        //    printf("Write the value at the i and j positiom (%d,%d): ", i, j ); // todo
            scanf("%d", &mat[i][j]);
         }
     }
