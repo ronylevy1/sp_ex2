@@ -5,7 +5,7 @@
 int main()
 {
 char tempChar;
-int i,j;
+int i = 0,j = 0;
 int** tempMat = (int **)malloc(10*sizeof(int*));
 for (int i = 0; i < 10; i++)
 {
@@ -24,22 +24,24 @@ switch (tempChar)
 {
 case 'A':
 {
-    function1(tempMat,10,10);
+    function1(tempMat,10);
     break;
 }
 
 case 'B':
 {
     scanf("%d%d", &i ,&j);
-    printf("%s\n", isTherPath(tempMat,10,i,j) ? "True" : "False");
+    printf("%s\n", isTherePath(tempMat,10,i,j) ? "True":"False");
     break;
 }
+
 case 'C':
 {
     scanf("%d%d", &i ,&j);
     printf("%d\n", theSortestPst(tempMat,10,i,j));
     break;
 }
+
 default:
     break;
 }

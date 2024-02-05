@@ -3,11 +3,12 @@
 #include <math.h>
 
 
-int function1(int **mat, int rowScanf, int colScanf){
+int function1(int **mat, int size)
+{
     //Put the value in the matrixe
-    for (int i = 0; i < rowScanf; i++)
+    for (int i = 0; i < size; i++)
     {
-        for (int j = 0; j < colScanf; j++)
+        for (int j = 0; j < size; j++)
         {
            scanf("%d", &mat[i][j]);
         }
@@ -15,7 +16,8 @@ int function1(int **mat, int rowScanf, int colScanf){
     return 0;
 }
 
-void floydWarshall(int **mat, int col){
+void floydWarshall(int **mat, int col)
+{
  //   int newMat[10][10];
    // for(int i = 0; i < rows; i++){
      //   for(int j = 0; j < cols; j++){
@@ -43,7 +45,8 @@ void floydWarshall(int **mat, int col){
 }
 
 
-int isTherPath(int **mat, int path, int i, int j){
+int isTherePath(int **mat, int path, int i, int j)
+{
     floydWarshall(mat, path);
     if (mat[i][j] != 0)
     {
@@ -52,7 +55,8 @@ int isTherPath(int **mat, int path, int i, int j){
     return 0;
 }
 
-int theSortestPst(int **mat, int path, int i, int j){
+int theSortestPst(int **mat, int path, int i, int j)
+{
     floydWarshall(mat,path);
     if (mat[i][j] != 0)
     {
