@@ -30,7 +30,7 @@ void floydWarshall(int **mat, int col){
         {
             for(int j = 0; j < col; j++)
             {
-                if (mat[i][j] != 0 || mat[i][k] != 0 || mat[k][j] != 0)
+                if (mat[i][j] != 0 && mat[i][k] != 0 && mat[k][j] != 0)
                 {
                     if(mat[i][j] > mat[i][k] + mat[k][j])
                     {
