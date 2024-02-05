@@ -6,14 +6,11 @@
 #define cols 10
 
 int function1(int **mat, int rowScanf, int colScanf){
-    // printf("Please write the values of the natrix:\n"); // The matrix values
     //Put the value in the matrixe
-
     for (int i = 0; i < rowScanf; i++)
     {
         for (int j = 0; j < colScanf; j++)
         {
-        //    printf("Write the value at the i and j positiom (%d,%d): ", i, j ); // todo
            scanf("%d", &mat[i][j]);
         }
     }
@@ -46,7 +43,7 @@ void floydWarshall(int **mat){
 
 int isTherPath(int **mat, int path, int i, int j){
     floydWarshall(mat);
-    if (mat[i][j] != 0 && mat[i][j] != INFINITY)
+    if (mat[i][j] != 0)
     {
         return 1;
     }
@@ -55,7 +52,7 @@ int isTherPath(int **mat, int path, int i, int j){
 
 int theSortestPst(int **mat, int path, int i, int j){
     floydWarshall(mat);
-    if (mat[i][j] != 0 && mat[i][j] < INFINITY)
+    if (mat[i][j] != 0)
     {
         return mat[i][j];
     }

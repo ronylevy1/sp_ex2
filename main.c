@@ -12,8 +12,11 @@ for (int i = 0; i < 10; i++)
     tempMat[i] = (int *)malloc(10*sizeof(int));
 }
 
-
-// printf("enter A, B, C or D:/n");
+for(int i = 0; i < 10; i++){
+    for(int j = 0; j < 10; j++){
+        tempMat[i][j] = 0;
+    }
+}
 
 do{
 scanf("%c", &tempChar);
