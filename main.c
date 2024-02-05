@@ -22,8 +22,8 @@ switch (tempChar)
 case 'A':
 {
     function1(tempMat,10,10);
+    break;
 }
-break;
 
 case 'B':
 {
@@ -42,6 +42,7 @@ default:
 }
 }
 while (tempChar != 'D');
+
     for (int i = 0; i < 10; i++)
     {
         free(tempMat[i]);
