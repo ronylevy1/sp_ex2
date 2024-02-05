@@ -2,8 +2,6 @@
 #include <stdbool.h>
 #include <math.h>
 
-#define rows 10
-#define cols 10
 
 int function1(int **mat, int rowScanf, int colScanf){
     //Put the value in the matrixe
@@ -17,24 +15,28 @@ int function1(int **mat, int rowScanf, int colScanf){
     return 0;
 }
 
-void floydWarshall(int **mat){
-    int newMat[10][10];
-    for(int i = 0; i < rows; i++){
-        for(int j = 0; j < cols; j++){
-            newMat[i][j] = mat[i][j];
-        }
-    }
+void floydWarshall(int **mat, int col){
+ //   int newMat[10][10];
+   // for(int i = 0; i < rows; i++){
+     //   for(int j = 0; j < cols; j++){
+       //     newMat[i][j] = mat[i][j];
+       // }
+   // }
 
 
     for (int k = 0; k < 10; k++)
     {
-        for(int i = 0; i < rows; i++)
+        for(int i = 0; i < col; i++)
         {
-            for(int j = 0; j < cols; j++)
+            for(int j = 0; j < col; j++)
             {
-               if(newMat[i][j] > newMat[i][k] + newMat[k][j]){
-                newMat[i][j] =  newMat[i][k] + newMat[k][j];
-               } 
+                if (mat[i][j] != 0 || mat[i][k] != 0 || mat[k][j] != 0)
+                {
+                    if(mat[i][j] > mat[i][k] + mat[k][j])
+                    {
+                        mat[i][j] =  mat[i][k] + mat[k][j];
+                    }   
+                }
             }
         }
     }
@@ -42,7 +44,7 @@ void floydWarshall(int **mat){
 
 
 int isTherPath(int **mat, int path, int i, int j){
-    floydWarshall(mat);
+    floydWarshall(mat, path);
     if (mat[i][j] != 0)
     {
         return 1;
@@ -51,7 +53,7 @@ int isTherPath(int **mat, int path, int i, int j){
 }
 
 int theSortestPst(int **mat, int path, int i, int j){
-    floydWarshall(mat);
+    floydWarshall(mat,path);
     if (mat[i][j] != 0)
     {
         return mat[i][j];
