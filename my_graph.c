@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "my_mat.h"
 
-int main()
+int my_graph()
 {
 char tempChar;
 int i = 0,j = 0;

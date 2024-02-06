@@ -18,14 +18,6 @@ int function1(int **mat, int size)
 
 void floydWarshall(int **mat, int col)
 {
- //   int newMat[10][10];
-   // for(int i = 0; i < rows; i++){
-     //   for(int j = 0; j < cols; j++){
-       //     newMat[i][j] = mat[i][j];
-       // }
-   // }
-
-
     for (int k = 0; k < 10; k++)
     {
         for(int i = 0; i < col; i++)

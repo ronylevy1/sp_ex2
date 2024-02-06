@@ -1,10 +1,10 @@
 all:connections
 
-connections: main.o librery.a
-	gcc -o connections main.o librery.a
+connections: my_graph.o librery.a
+	gcc -o connections my_graph.o librery.a
 
-main.o: main.c my_mat.h
-	gcc -Wall -g -c main.c -o main.o
+my_graph.o: my_graph.c my_mat.h
+	gcc -Wall -g -c my_graph.c -o my_graph.o
 
 librery.a: my_mat.o 
 	ar -rcs librery.a my_mat.o
