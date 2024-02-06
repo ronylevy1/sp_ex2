@@ -17,7 +17,7 @@ for(int i = 0; i < 10; i++){
         tempMat[i][j] = 0;
     }
 }
-
+ 
 do{
 scanf("%c", &tempChar);
 switch (tempChar)
