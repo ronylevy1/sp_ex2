@@ -48,11 +48,11 @@ default:
 }
 while (tempChar != 'D');
 
-    for (int i = 0; i < 10; i++)
-    {
-        free(tempMat[i]);
-    }
-    free(tempMat);
+for (int i = 0; i < 10; i++)
+{
+    free(tempMat[i]);
+}
+free(tempMat);
 
 return 0;
 }
